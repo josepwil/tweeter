@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
 
@@ -52,15 +53,17 @@
   </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="main-container">
-      <div>
-
-        <h1>Example tweet</h1>
-
-        <p>dfsdfdgdflgd  gdfg g f sdf sd f gdfgdgdfgd   fgdfgdfgdg dsdccvxcvxcAsasdcZcAsasASAS sdasdas sadasdasdasd asdasdasfasfas sdasdasdasd</p>
-
-      </div>
-
-    </main>
+      <main class="main-container">
+        <section class="new-tweet">
+          <form action="/tweets" method="POST">
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <div class="tweet-button">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+      </main>
+    
   </body>
 </html>
