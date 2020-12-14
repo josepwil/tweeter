@@ -26,5 +26,6 @@ button {
   border-right: 0px;
   border-bottom: solid 4px #545149;
   background: transparent;
+  outline: none;
 }
 
