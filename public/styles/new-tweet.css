@@ -29,3 +29,11 @@ button {
   outline: none;
 }
 
+.counter {
+  font-family: 'Bungee', cursive;
+}
+
+.characters-exceeded {
+  color: red;
+}
+
