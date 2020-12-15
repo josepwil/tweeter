@@ -1,0 +1,48 @@
+article {
+  border: solid 4px #545149;
+  margin-top: 40px;
+}
+
+
+article.tweet header {
+  width: 96%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tweet-author {
+  display: flex;
+}
+
+article.tweet footer {
+  width: 96%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: solid 4px #545149
+}
+
+article.tweet .tweet-body {
+  width: 96%;
+  margin: auto;
+}
+
+.icons {
+  color: #4056a1;
+}
+
+.handle {
+  color: lightgray;
+  visibility: hidden;
+}
+
+article:hover {
+  box-shadow: 10px 10px 0px lightgray;
+}
+
+article:hover .handle {
+  visibility: visible;
+}

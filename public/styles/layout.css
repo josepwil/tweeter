@@ -25,8 +25,9 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-.main-container {
+main {
    display: flex;
+   flex-direction: column;
    justify-content: center;
    width: 90%;
    background-color: #f4f1ec;
