@@ -1,7 +1,7 @@
 article {
   border: solid 4px #545149;
   margin-top: 40px;
-  font-weight: 200;
+  filter: blur(1px);
 }
 
 
@@ -43,6 +43,7 @@ article.tweet .tweet-body {
 article:hover {
   box-shadow: 10px 10px 0px lightgray;
   font-weight: 300;
+  filter: blur(0px);
 }
 
 article:hover .handle {
