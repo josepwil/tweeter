@@ -1,6 +1,7 @@
 article {
   border: solid 4px #545149;
   margin-top: 40px;
+  margin-bottom: 40px;
   filter: blur(1px);
 }
 
@@ -31,6 +32,13 @@ article.tweet .tweet-body {
   margin: auto;
 }
 
+article.tweet .avatar {
+  height: 40px;
+  width: auto;
+  align-self: center;
+  margin-right: 5px;
+}
+
 .icons {
   color: #4056a1;
 }
@@ -49,3 +57,5 @@ article:hover {
 article:hover .handle {
   visibility: visible;
 }
+
+
