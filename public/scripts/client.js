@@ -66,5 +66,17 @@ $( document ).ready(function() {
     return $markup;
   }
   renderTweets(data);
+
+  // ajax form submission
+  $('form').on('submit', function(event) {
+    event.preventDefault();
+    $.ajax({ method: 'POST', url: '/tweets', data: $(this).serialize(), dataType: 'JSON' })
+    .done(function(a) {
+      console.log('data: ', a);
+    })
+  })
+
+
+
 });
 
