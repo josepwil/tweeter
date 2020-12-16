@@ -7,21 +7,28 @@
  // Fake data taken from initial-tweets.json
 
 $(document).ready(function() {
+
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   const createTweetElement = function(tweetObj) {
     const $markup = $(`
       <article class="tweet">
       <header>
         <div class="tweet-author">
-          <img src=${tweetObj.user.avatars} class="avatar">
-          <p>${tweetObj.user.name}</p>
+          <img src=${escape(tweetObj.user.avatars)} class="avatar">
+          <p>${escape(tweetObj.user.name)}</p>
         </div>
         <div>
-          <p class="handle">${tweetObj.user.handle}</p>
+          <p class="handle">${escape(tweetObj.user.handle)}</p>
         </div>
       </header>
   
       <div class="tweet-body">
-        <p>${tweetObj.content.text}</p>
+        <p>${escape(tweetObj.content.text)}</p>
       </div>
   
       <footer>
@@ -60,7 +67,7 @@ $(document).ready(function() {
     })
   })
 
-  // ajax get 
+  // ajax get tweets
   const loadTweets = function() {
     $.ajax({method: 'GET', url: '/tweets', dataType: 'JSON'})
     .done(function(response) {
