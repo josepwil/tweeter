@@ -3,10 +3,8 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
  // Test / driver code (temporary). Eventually will get this from the server.
  // Fake data taken from initial-tweets.json
-
 const data = [
   {
     "user": {
@@ -43,7 +41,7 @@ $( document ).ready(function() {
 
 
   const createTweetElement = function(tweetObj) {
-    const markup = $(`
+    const $markup = $(`
       <article class="tweet">
       <header>
         <div class="tweet-author">
@@ -65,11 +63,8 @@ $( document ).ready(function() {
       </footer>
       </article>
     `);
-    return markup;
+    return $markup;
   }
-  
-
   renderTweets(data);
-
 });
 
