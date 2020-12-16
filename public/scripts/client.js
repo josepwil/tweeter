@@ -43,6 +43,16 @@ $(document).ready(function() {
   // ajax post form submission
   $('form').on('submit', function(event) {
     event.preventDefault();
+    const tweetContent = $(this).find('#tweet-text').val()
+    
+    if (tweetContent === '') {
+      return alert('please enter a tweet');
+    }
+
+    if (tweetContent.length > 140) {
+      return alert('Max 140 characters');
+    }
+
     $.ajax({ method: 'POST', url: '/tweets', data: $(this).serialize() })
     .done(function() {
       console.log('success')
@@ -53,7 +63,6 @@ $(document).ready(function() {
   const loadTweets = function() {
     $.ajax({method: 'GET', url: '/tweets', dataType: 'JSON'})
     .done(function(response) {
-      console.log(response);
       renderTweets(response);
     });
   }
