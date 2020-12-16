@@ -36,7 +36,7 @@ $(document).ready(function() {
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet)
+      $('#tweets-container').prepend($tweet)
     }
   }
 
@@ -56,6 +56,7 @@ $(document).ready(function() {
     $.ajax({ method: 'POST', url: '/tweets', data: $(this).serialize() })
     .done(function() {
       console.log('success')
+      loadTweets();
     })
   })
 
