@@ -5,7 +5,7 @@
  */
  // Test / driver code (temporary). Eventually will get this from the server.
  // Fake data taken from initial-tweets.json
-const data = [
+ const data = [
   {
     "user": {
       "name": "Newton",
@@ -31,15 +31,6 @@ const data = [
 ]
 
 $( document ).ready(function() {
-
-  const renderTweets = function(tweets) {
-    for (const tweet of tweets) {
-      const $tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet)
-    }
-  }
-
-
   const createTweetElement = function(tweetObj) {
     const $markup = $(`
       <article class="tweet">
@@ -65,14 +56,22 @@ $( document ).ready(function() {
     `);
     return $markup;
   }
+
+  const renderTweets = function(tweets) {
+    for (const tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
+      $('#tweets-container').append($tweet)
+    }
+  }
+
   renderTweets(data);
 
   // ajax form submission
   $('form').on('submit', function(event) {
     event.preventDefault();
-    $.ajax({ method: 'POST', url: '/tweets', data: $(this).serialize(), dataType: 'JSON' })
-    .done(function(a) {
-      console.log('data: ', a);
+    $.ajax({ method: 'POST', url: '/tweets', data: $(this).serialize() })
+    .done(function() {
+      console.log('success')
     })
   })
 
