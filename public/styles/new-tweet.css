@@ -37,3 +37,14 @@ button {
   color: red;
 }
 
+
+.new-tweet .warning {
+  color: red;
+  border: solid 4px red;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.new-tweet .warning p {
+  margin-left: 10px;
+}

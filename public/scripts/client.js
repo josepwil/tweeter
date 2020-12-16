@@ -50,15 +50,22 @@ $(document).ready(function() {
   // ajax post form submission
   $('form').on('submit', function(event) {
     event.preventDefault();
+    // hide warning div
+    $('.warning').slideUp();
+
     const tweetContent = $(this).find('#tweet-text').val()
     
     if (tweetContent === '') {
-      return alert('please enter a tweet');
+      $('.error-text').text('Please enter your tweet!')
+      return $('.warning').slideDown();
     }
 
     if (tweetContent.length > 140) {
-      return alert('Max 140 characters');
+      $('.error-text').text('You have exceeded the maximum 140 characters, please try to be more concise')
+      return $('.warning').slideDown();
     }
+
+    console.log('should not run this')
 
     $.ajax({ method: 'POST', url: '/tweets', data: $(this).serialize() })
     .done(function() {
