@@ -1,7 +1,7 @@
 nav {
+  position: absolute;
   height: 120px;
   width: 100%;
-  position: fixed;
   top: 0;
   background-color: transparent;
   color: #ffffff; 
@@ -96,6 +96,7 @@ nav {
 
 @media (min-width: 1024px) {
   nav {
+    position: fixed;
     background-color: #4056a1;
   }
   .logo {
