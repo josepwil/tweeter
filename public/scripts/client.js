@@ -82,5 +82,31 @@ $(document).ready(function() {
     });
   }
   loadTweets();
+
+  // stretch - form toggle
+  $('.form-toggle').on('click', function() {
+    $(this).toggleClass('rotate');
+    $('.new-tweet').slideToggle();
+    $('#tweet-text').focus();
+  })
+
+  // stretch second toggle button
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 0) {
+      $('.back-to-top').addClass('visible')
+      $('.form-toggle-container').addClass('invisible')
+     } else {
+      $('.back-to-top').removeClass('visible')
+      $('.form-toggle-container').removeClass('invisible')
+     }
+  })
+
+  $('.back-to-top').on('click', function() {
+    $('html, body').animate({scrollTop: '0px'}, 300);
+    $('.new-tweet').slideDown();
+    $('#tweet-text').focus(); 
+    $('.form-toggle').addClass('rotate');
+  })
+
 });
 

@@ -28,3 +28,63 @@ nav {
     justify-content: center;
     color: red;
  }
+
+
+ .arrow-container .form-toggle {
+   margin: 0px;
+   cursor: pointer;
+ }
+
+ @keyframes bounce {
+  0% {padding-top: 0px;}  
+  10% {padding-top: 2px;}  
+  20% {padding-top: 4px;}  
+  30% {padding-top: 6px;}  
+  40% {padding-top: 8px;}  
+  50% {padding-top: 10px;}  
+  60% {padding-top: 8px;}  
+  70% {padding-top: 6px;}  
+  80% {padding-top: 4px;}
+  90% {padding-top: 2px;}
+  100% {padding-top: 0px;}
+ }
+
+ .arrow-container .form-toggle :hover{
+  animation-name: bounce;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+ .rotate {
+  transform: rotate(180deg);
+ }
+
+ .back-to-top {
+   visibility: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   align-self: flex-end;
+   background-color: red;
+   color: #ffffff;
+   font-size: 48px;
+   border-radius: 50%;
+   width: 60px;
+   height: 60px;
+   position: fixed;
+   margin-bottom: 10px;
+   bottom: 0;
+   cursor: pointer;
+ }
+
+ .back-to-top :hover{
+  color: #4056a1;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}

@@ -1,8 +1,7 @@
 .new-tweet {
-  display: flex;
-  flex-direction: column;
+  display: none;
   width: 100%;
-  margin: 6px 0px;
+  margin: 10px 0px;
 }
 
 .tweet-button {
@@ -15,6 +14,7 @@ button {
   border: 0px;
   font-family: 'Bungee', cursive;
   color: #ffffff;
+  cursor: pointer;
 }
 
 #tweet-text {
