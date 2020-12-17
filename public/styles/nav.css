@@ -3,7 +3,7 @@ nav {
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: #4056a1;
+  background-color: transparent;
   color: #ffffff; 
   z-index: 1;
  }
@@ -11,6 +11,10 @@ nav {
  nav span {
   font-family: 'Bungee', cursive;
   font-size: 36px;
+ }
+
+ .logo {
+   font-size: 48px;
  }
 
  .nav-container {
@@ -88,4 +92,13 @@ nav {
 
 .visible {
   visibility: visible;
+}
+
+@media (min-width: 1024px) {
+  nav {
+    background-color: #4056a1;
+  }
+  .logo {
+    font-size: 36px;
+  }
 }

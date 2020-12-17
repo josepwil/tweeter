@@ -34,7 +34,7 @@
     <!-- Top nav bar (fixed) -->
     <nav class="nav-container">
       <div>
-        <span>Tweeter</span>
+        <span class="logo">Tweeter</span>
       </div>
 
       <div class="form-toggle-container">
@@ -47,35 +47,39 @@
       </div>
     </nav>
 
-    <header class="page-header">
-      <div class="image-container">
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <div>
-          <p><b>Alice</b> Adams</p>
-      </div>
-    </header>
+    <div class="responsive-container">
 
-    <!-- Page-specific (main) content here -->
-      <main>
-        <section class="new-tweet">
-          <div class="warning">
-            <p class="error-text"></p>
-          </div>
-          <form>
-            <textarea name="text" id="tweet-text" rows="1" placeholder="What are you humming about?"></textarea>
-            <div class="tweet-button">
-              <button type="submit">Tweet</button>
-              <output name="counter" class="counter" for="tweet-text">140</output>
+      <header class="page-header">
+        <div class="image-container">
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <div>
+            <p><b>Alice</b> Adams</p>
+        </div>
+      </header>
+  
+      <!-- Page-specific (main) content here -->
+        <main>
+          <section class="new-tweet">
+            <div class="warning">
+              <p class="error-text"></p>
             </div>
-          </form>
-        </section>
-        <section id="tweets-container">
-        </section>
+            <form>
+              <textarea name="text" id="tweet-text" rows="1" placeholder="What are you humming about?"></textarea>
+              <div class="tweet-button">
+                <button type="submit">Tweet</button>
+                <output name="counter" class="counter" for="tweet-text">140</output>
+              </div>
+            </form>
+          </section>
+          <section id="tweets-container">
+          </section>
+  
+          <div class="back-to-top"><i class="fas fa-angle-double-up"></i></div>
+        </main>
 
+    </div>
 
-        <div class="back-to-top"><i class="fas fa-angle-double-up"></i></div>
-      </main>
     
 
 
