@@ -65,8 +65,6 @@ $(document).ready(function() {
       return $('.warning').slideDown();
     }
 
-    console.log('should not run this')
-
     $.ajax({ method: 'POST', url: '/tweets', data: $(this).serialize() })
     .done(function() {
       console.log('success')
@@ -83,14 +81,14 @@ $(document).ready(function() {
   }
   loadTweets();
 
-  // stretch - form toggle
+  // stretch - form toggle click event
   $('.form-toggle').on('click', function() {
     $(this).toggleClass('rotate');
     $('.new-tweet').slideToggle();
     $('#tweet-text').focus();
   })
 
-  // stretch second toggle button
+  // stretch second toggle button scroll
   $(window).scroll(function() {
     if ($(this).scrollTop() > 0) {
       $('.back-to-top').addClass('visible')
@@ -100,7 +98,7 @@ $(document).ready(function() {
       $('.form-toggle-container').removeClass('invisible')
      }
   })
-
+  // second toddle click event
   $('.back-to-top').on('click', function() {
     $('html, body').animate({scrollTop: '0px'}, 300);
     $('.new-tweet').slideDown();

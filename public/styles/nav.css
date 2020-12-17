@@ -5,6 +5,7 @@ nav {
   top: 0;
   background-color: #4056a1;
   color: #ffffff; 
+  z-index: 1;
  }
 
  nav span {
