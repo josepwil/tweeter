@@ -41,6 +41,7 @@ $(document).ready(function() {
   }
 
   const renderTweets = function(tweets) {
+    $('#tweets-container').empty();
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $('#tweets-container').prepend($tweet)
@@ -67,7 +68,6 @@ $(document).ready(function() {
 
     $.ajax({ method: 'POST', url: '/tweets', data: $(this).serialize() })
     .done(function() {
-      console.log('success')
       loadTweets();
     })
   })
@@ -80,6 +80,7 @@ $(document).ready(function() {
     });
   }
   loadTweets();
+ 
 
   // stretch - form toggle click event
   $('.form-toggle').on('click', function() {
@@ -105,6 +106,7 @@ $(document).ready(function() {
     $('#tweet-text').focus(); 
     $('.form-toggle').addClass('rotate');
   })
-
 });
+
+
 
