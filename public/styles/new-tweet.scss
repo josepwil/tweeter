@@ -1,0 +1,52 @@
+@use 'layout';
+
+.new-tweet {
+  display: none;
+  width: 100%;
+  margin: 10px 0px;
+}
+
+.tweet-button {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  background-color: layout.$highlight-color;
+  border: 0px;
+  font-family: layout.$secondary-font;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#tweet-text {
+  width: 100%;
+  resize: none;
+  font-weight: bold;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: solid 4px layout.$primary-color;
+  background: transparent;
+  outline: none;
+}
+
+.counter {
+  font-family: layout.$secondary-font;
+}
+
+.characters-exceeded {
+  color: layout.$danger-color;
+}
+
+
+.new-tweet .warning {
+  color: layout.$danger-color;
+  border: solid 4px layout.$danger-color;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.new-tweet .warning p {
+  margin-left: 10px;
+}

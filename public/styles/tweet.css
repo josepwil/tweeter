@@ -1,38 +1,95 @@
+/* Sass Variables */
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 24px;
+}
+
+header, nav {
+  font-size: 36px;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  background-color: #f4f1ec;
+  margin: auto;
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 24px;
+  }
+
+  .responsive-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 120px;
+  }
+
+  .responsive-container .page-header {
+    margin-top: 120px;
+    width: 30%;
+  }
+
+  main {
+    width: 50%;
+    margin: 120px 0 0 0;
+  }
+}
 article {
   border: solid 4px #545149;
   margin-top: 40px;
   margin-bottom: 40px;
   filter: blur(1px);
 }
-
-
-article.tweet header {
+article header {
   width: 96%;
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
-.tweet-author {
+article .tweet-author {
   display: flex;
 }
-
-article.tweet footer {
+article footer {
   width: 96%;
   margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-top: solid 4px #545149
+  border-top: solid 4px #545149;
 }
-
-article.tweet .tweet-body {
+article .tweet-body {
   width: 96%;
   margin: auto;
 }
-
-article.tweet .avatar {
+article .avatar {
   height: 40px;
   width: auto;
   align-self: center;
@@ -58,4 +115,4 @@ article:hover .handle {
   visibility: visible;
 }
 
-
+/*# sourceMappingURL=tweet.css.map */

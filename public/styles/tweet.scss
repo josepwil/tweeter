@@ -1,0 +1,69 @@
+@use 'layout';
+
+article {
+  border: solid 4px layout.$primary-color;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  filter: blur(1px);
+
+  header {
+    width: 96%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .tweet-author {
+    display: flex;
+  }
+
+  footer {
+    width: 96%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: solid 4px #545149
+  }
+
+  .tweet-body {
+    width: 96%;
+    margin: auto;
+  }
+
+  .avatar {
+    height: 40px;
+    width: auto;
+    align-self: center;
+    margin-right: 5px;
+  }
+  
+  .icons {
+    color: #4056a1;
+  }
+  
+  .handle {
+    color: lightgray;
+    visibility: hidden;
+  }
+}
+
+
+
+
+
+
+
+
+article:hover {
+  box-shadow: 10px 10px 0px lightgray;
+  font-weight: 300;
+  filter: blur(0px);
+}
+
+article:hover .handle {
+  visibility: visible;
+}
+
+

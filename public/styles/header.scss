@@ -1,0 +1,26 @@
+@use 'layout';
+
+.page-header {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e09500;
+  background-image: url("https://www.transparenttextures.com/patterns/clean-textile.png");
+  font-size: 48px;
+  color: #ffffff;
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      margin-top: 10px;
+    }
+  }
+}
+
+
+
