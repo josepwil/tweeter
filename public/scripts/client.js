@@ -3,8 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
- // Test / driver code (temporary). Eventually will get this from the server.
- // Fake data taken from initial-tweets.json
 
 $(document).ready(function() {
 
@@ -12,7 +10,7 @@ $(document).ready(function() {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
 
   const createTweetElement = function(tweetObj) {
     const $markup = $(`
@@ -38,15 +36,15 @@ $(document).ready(function() {
       </article>
     `);
     return $markup;
-  }
+  };
 
   const renderTweets = function(tweets) {
     $('#tweets-container').empty();
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('#tweets-container').prepend($tweet)
+      $('#tweets-container').prepend($tweet);
     }
-  }
+  };
 
   // ajax post form submission
   $('form').on('submit', function(event) {
@@ -54,31 +52,33 @@ $(document).ready(function() {
     // hide warning div
     $('.warning').slideUp();
 
-    const tweetContent = $(this).find('#tweet-text').val()
+    const tweetContent = $(this).find('#tweet-text').val();
     
     if (tweetContent === '') {
-      $('.error-text').text('Please enter your tweet!')
+      $('.error-text').text('Please enter your tweet!');
       return $('.warning').slideDown();
     }
 
     if (tweetContent.length > 140) {
-      $('.error-text').text('You have exceeded the maximum 140 characters, please try to be more concise')
+      $('.error-text').text('You have exceeded the maximum 140 characters, please try to be more concise');
       return $('.warning').slideDown();
     }
 
     $.ajax({ method: 'POST', url: '/tweets', data: $(this).serialize() })
-    .done(function() {
-      loadTweets();
-    })
-  })
+      .done(function() {
+        $('#tweet-text').val('');
+        $('.counter').val(140);
+        loadTweets();
+      });
+  });
 
   // ajax get tweets
   const loadTweets = function() {
     $.ajax({method: 'GET', url: '/tweets', dataType: 'JSON'})
-    .done(function(response) {
-      renderTweets(response);
-    });
-  }
+      .done(function(response) {
+        renderTweets(response);
+      });
+  };
   loadTweets();
  
 
@@ -87,25 +87,25 @@ $(document).ready(function() {
     $(this).toggleClass('rotate');
     $('.new-tweet').slideToggle();
     $('#tweet-text').focus();
-  })
+  });
 
   // stretch second toggle button scroll
   $(window).scroll(function() {
     if ($(this).scrollTop() > 0) {
-      $('.back-to-top').addClass('visible')
-      $('.form-toggle-container').addClass('invisible')
-     } else {
-      $('.back-to-top').removeClass('visible')
-      $('.form-toggle-container').removeClass('invisible')
-     }
-  })
+      $('.back-to-top').addClass('visible');
+      $('.form-toggle-container').addClass('invisible');
+    } else {
+      $('.back-to-top').removeClass('visible');
+      $('.form-toggle-container').removeClass('invisible');
+    }
+  });
   // second toddle click event
   $('.back-to-top').on('click', function() {
     $('html, body').animate({scrollTop: '0px'}, 300);
     $('.new-tweet').slideDown();
-    $('#tweet-text').focus(); 
+    $('#tweet-text').focus();
     $('.form-toggle').addClass('rotate');
-  })
+  });
 });
 
 

@@ -95,12 +95,10 @@ article .avatar {
   align-self: center;
   margin-right: 5px;
 }
-
-.icons {
+article .icons {
   color: #4056a1;
 }
-
-.handle {
+article .handle {
   color: lightgray;
   visibility: hidden;
 }

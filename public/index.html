@@ -59,30 +59,28 @@
       </header>
   
       <!-- Page-specific (main) content here -->
-        <main>
-          <section class="new-tweet">
-            <div class="warning">
-              <p class="error-text"></p>
+      <main>
+        <section class="new-tweet">
+          <div class="warning">
+            <p class="error-text"></p>
+          </div>
+          <form>
+            <textarea name="text" id="tweet-text" rows="1" placeholder="What are you humming about?"></textarea>
+            <div class="tweet-button">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
             </div>
-            <form>
-              <textarea name="text" id="tweet-text" rows="1" placeholder="What are you humming about?"></textarea>
-              <div class="tweet-button">
-                <button type="submit">Tweet</button>
-                <output name="counter" class="counter" for="tweet-text">140</output>
-              </div>
-            </form>
-          </section>
-          <section id="tweets-container">
-          </section>
-  
-          <div class="back-to-top"><i class="fas fa-angle-double-up"></i></div>
-        </main>
+          </form>
+        </section>
+        <section id="tweets-container">
+        </section>
+
+        <div class="back-to-top">
+          <i class="fas fa-angle-double-up"></i>
+        </div>
+      </main>
 
     </div>
-
-    
-
-
-      
+          
   </body>
 </html>
