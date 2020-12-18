@@ -41,6 +41,7 @@ article {
   
   .icons {
     color: #4056a1;
+    visibility: hidden;
   }
   
   .handle {
@@ -56,6 +57,9 @@ article:hover {
 }
 
 article:hover .handle {
+  visibility: visible;
+}
+article:hover .icons {
   visibility: visible;
 }
 
