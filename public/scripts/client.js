@@ -106,7 +106,5 @@ $(document).ready(function() {
     $('#tweet-text').focus();
     $('.form-toggle').addClass('rotate');
   });
+
 });
-
-
-

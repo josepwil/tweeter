@@ -11,5 +11,6 @@ $(document).ready(function() {
     } else {
       counter.removeClass('characters-exceeded');
     }
+
   });
 });
