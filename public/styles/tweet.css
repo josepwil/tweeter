@@ -88,6 +88,7 @@ article footer {
 article .tweet-body {
   width: 96%;
   margin: auto;
+  word-break: break-all;
 }
 article .avatar {
   height: 40px;
