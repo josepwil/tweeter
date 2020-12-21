@@ -30,7 +30,7 @@ article {
   .tweet-body {
     width: 96%;
     margin: auto;
-    word-break: break-all;
+    overflow-wrap: break-word;
   }
 
   .avatar {
