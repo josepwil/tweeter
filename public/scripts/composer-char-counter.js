@@ -11,6 +11,7 @@ $(document).ready(function() {
     } else {
       counter.removeClass('characters-exceeded');
     }
-
+    // update input height
+    $(this).css('height', 'auto').css('height', this.scrollHeight + (this.offsetHeight - this.clientHeight));
   });
 });
